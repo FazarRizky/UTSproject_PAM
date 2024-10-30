@@ -1,5 +1,6 @@
 package lat.pam.utsproject
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -20,6 +21,18 @@ class FoodAdapter(private val foodList: List<Food>) : RecyclerView.Adapter<FoodA
         holder.foodName.text = food.name
         holder.foodDescription.text = food.description
         holder.foodImage.setImageResource(food.imageResourceId)
+
+        holder.itemView.setOnClickListener{
+            val context = holder.itemView.context
+            val move_intent = Intent(context, OrderActivity::class.java)
+
+            move_intent.putExtra("foodName", food.name)
+            move_intent.putExtra("foodDescription", food.description)
+            move_intent.putExtra("foodImage", food.imageResourceId)
+
+            context.startActivity(move_intent)
+        }
+
     }
 
     override fun getItemCount(): Int {

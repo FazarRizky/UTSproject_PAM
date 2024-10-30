@@ -10,14 +10,16 @@
     android:layout_marginLeft="25dp"
     android:layout_marginRight="25dp"
     android:layout_marginBottom="25dp"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    >
+
 
     <!-- Logo Aplikasi -->
     <ImageView
         android:id="@+id/logo"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:src="@drawable/ic_launcher_foreground"
+        android:src="@drawable/logo"
         android:layout_gravity="center_horizontal"
         android:layout_marginBottom="32dp"/>
 
@@ -55,12 +57,20 @@
 
     <!-- Register Link -->
     <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Belum Punya akun? registrasi cuy!"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        />
+    <Button
         android:id="@+id/tvRegister"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/register"
         android:layout_gravity="center"
         android:clickable="true"
-        android:focusable="true"/>
+        android:focusable="true"
+        android:minHeight="48dp"
+        android:text="@string/register" />
 
 </LinearLayout>
